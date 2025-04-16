@@ -7,7 +7,13 @@ public class Aurthur : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Beast")) {
+            Destroy(collision.gameObject);
 
+        } }
     // Update is called once per frame
     void Update()
     {

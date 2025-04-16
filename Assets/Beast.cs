@@ -17,7 +17,11 @@ public class Beast : MonoBehaviour
     void Update()
     {
         transform.LookAt(Arther.transform);
-        transform.Translate(transform.forward*speed *Time.deltaTime);
+        //  transform.Translate(transform.forward*speed *Time.deltaTime);
+
+
+        transform.position = Vector3.MoveTowards(transform.position,Arther.transform.position,Time.deltaTime*speed);
+    
     }
 }
 
